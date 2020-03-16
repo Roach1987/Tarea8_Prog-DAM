@@ -30,6 +30,8 @@ public class Principal {
                     
                     System.out.println(mensaje);
                     
+                    // Continuar codigo
+                    
                     break;
                 case "2":
                     System.out.println();
