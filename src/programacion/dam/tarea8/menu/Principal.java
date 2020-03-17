@@ -28,10 +28,12 @@ public class Principal {
                     // Validamos la cadena introducida por el usuario.
                     String mensaje = Util.validaDatos(cadenaPeticion);
                     
-                    System.out.println(mensaje);
-                    
-                    // Continuar codigo
-                    
+                    if(!mensaje.equals(Util.MENSAJE_OK)){
+                        System.out.println(mensaje);
+                    }else{
+                        // ******* Continuar codigo con "recoger los datos".
+
+                    }
                     break;
                 case "2":
                     System.out.println();
