@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <datos_cliente>
-<id>12345678Z</id>
-<nombre>nombre</nombre>
-<apellidos>apellidos</apellidos>
-<telefonos>
-<telefono>952333333</telefono>
-<total>1</total>
-</telefonos>
-<mails>
-<mail>prueba@prueba.com</mail>
-<mail>test@test.com</mail>
-</mails>
+	<id>X7848511Z</id>
+	<nombre>nombre</nombre>
+	<apellidos>apellidos</apellidos>
+	<telefonos>
+		<telefono>919601122</telefono>
+		<telefono>663998877</telefono>
+		<telefono>660112233</telefono>
+		<telefono>+57925001122</telefono>
+		<telefono>+34925336699</telefono>
+		<total>5</total>
+	</telefonos>
+	<mails>
+		<mail>mail@mail.com</mail>
+		<mail>mail2@mail.com</mail>
+	</mails>
 </datos_cliente>

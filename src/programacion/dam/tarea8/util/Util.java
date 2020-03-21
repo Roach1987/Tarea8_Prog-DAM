@@ -201,7 +201,7 @@ public class Util {
         }
         
         documento.getDocumentElement().appendChild(elemento);
-        
+                        
         // Pasamos el documento a un fichero
         DOMUtil.DOM2XML(documento,"cliente.xml");
         
@@ -252,7 +252,7 @@ public class Util {
         return arrayLimpio;
     }
     
-        /**
+    /**
      * Metodo que valida un DNI, comprobando que su longitud sea correcta, asi
      * como su Letra corresponde con el numero.
      *
