@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Cliente {
     
     // Atributos
-    private String dni;
+    private String nif;
     private String nombre;
     private String apellidos;
     private ArrayList<String> telefonos;
@@ -19,8 +19,8 @@ public class Cliente {
     public Cliente(){
     }
     
-    public Cliente(String dni, String nombre, String apellidos, ArrayList<String> telefonos, ArrayList<String> emails){
-        this.dni = dni;
+    public Cliente(String nif, String nombre, String apellidos, ArrayList<String> telefonos, ArrayList<String> emails){
+        this.nif = nif;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.telefonos = telefonos;
@@ -28,12 +28,12 @@ public class Cliente {
     }
     
     // Getters y Setters
-    public String getDni() {
-        return dni;
+    public String getNif() {
+        return nif;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setDni(String nif) {
+        this.nif = nif;
     }
 
     public String getNombre() {
