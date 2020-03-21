@@ -1,5 +1,7 @@
 package programacion.dam.tarea8.beans;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Roach
@@ -10,14 +12,14 @@ public class Cliente {
     private String dni;
     private String nombre;
     private String apellidos;
-    private String[] telefonos;
-    private String[] emails;
+    private ArrayList<String> telefonos;
+    private ArrayList<String> emails;
     
     // Constructores
     public Cliente(){
     }
     
-    public Cliente(String dni, String nombre, String apellidos, String[] telefonos, String[] emails){
+    public Cliente(String dni, String nombre, String apellidos, ArrayList<String> telefonos, ArrayList<String> emails){
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -50,19 +52,19 @@ public class Cliente {
         this.apellidos = apellidos;
     }
 
-    public String[] getTelefonos() {
+    public ArrayList<String> getTelefonos() {
         return telefonos;
     }
 
-    public void setTelefonos(String[] telefonos) {
+    public void setTelefonos(ArrayList<String> telefonos) {
         this.telefonos = telefonos;
     }
 
-    public String[] getEmails() {
+    public ArrayList<String> getEmails() {
         return emails;
     }
 
-    public void setEmails(String[] emails) {
+    public void setEmails(ArrayList<String> emails) {
         this.emails = emails;
     }
 }

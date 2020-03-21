@@ -32,7 +32,7 @@ public class Principal {
                         System.out.println(mensaje);
                     }else{
                         // ******* Continuar codigo con "recoger los datos".
-
+                        Util.obtenerCamposCliente(cadenaPeticion);
                     }
                     break;
                 case "2":

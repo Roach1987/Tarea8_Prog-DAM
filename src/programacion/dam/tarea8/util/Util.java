@@ -1,5 +1,7 @@
 package programacion.dam.tarea8.util;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Roach
@@ -15,6 +17,9 @@ public class Util {
     // Patrones
     public static final String PATRON_NIF = "[XYxy]?[0-9]{8,9}[A-Za-z]";
     public static final String PATRON_NOMBRE_APELLIDOS = "\"[A-Za-z]*\"";
+    public static final String PATRON_MAIL = "[a-z]*@[a-z]*\\.[a-z]{2,}";
+    public static final String PATRON_MAIL_COMPLEJO = "^[^@]+@[^@]+\\.[a-zA-Z]{2,}$";
+    public static final String PATRON_TELEFONO_LOCAL = "([(]?\\d{2,4}[)]?|\\+\\d{2}?)[0-9]{9,11}";
     
 // **************************************** Validaciones **************************************************
     /**
@@ -60,6 +65,39 @@ public class Util {
 // ********************************************************************************************************
 // *********************************** Aplicar logica funcional *******************************************
 
+    /**
+     * Método que recupera los datos, si no existe por lo menos un mail, o un telefono
+     * devolvera un mensaje de error, si todo va bien devolvera un mensaje de OK
+     * @param cadena
+     * @return String
+     */
+    public static String obtenerCamposCliente(String cadena){
+        String mensaje = "";
+        String[] datosCadena = cadena.split(",");
+        
+        ArrayList<String> telefonosLocales = new ArrayList<>();
+        ArrayList<String> telefonosInternacionales = new ArrayList<>();
+        ArrayList<String> mails = new ArrayList<>();
+        
+        // Guardamos los datos obligatorios NIF, Nombre y Apellidos
+        // limpiamos Nombre y Apellidos de las comillas "".
+        String nif = datosCadena[0].trim();
+        String nombre = datosCadena[1].trim().replace("\"", "");
+        String apellidos = datosCadena[2].trim().replace("\"", "");
+        
+        String[] datosLimpios = limpiarArrayString(datosCadena, 4);
+        
+        for(String dato : datosLimpios){
+            
+            
+        
+        
+        
+        }
+        
+    
+        return mensaje;
+    }
     // ******** Continuar codigo!!!!!!!!!!!!!!!!!!!!!!
 
 // ********************************************************************************************************
@@ -73,5 +111,26 @@ public class Util {
         System.out.println("2 - Salir de la aplicación");
         System.out.println("*** Introduzca la opción deseada (1-2) ***");
     }
+    
+    /**
+     * Método que limpia un array, desde la posicion indicada (la posicion es la real)
+     * Ejemplo: primera posicion = 1.
+     * @param arrayALimpiar
+     * @param indiceEmpezar
+     * @return 
+     */
+    public static String[] limpiarArrayString(String[] arrayALimpiar, int indiceEmpezar){
+        String[] arrayLimpio = new String[arrayALimpiar.length - indiceEmpezar +1];
+        int longitudArrayLimpio = arrayLimpio.length;
+        int posicionArrayLimpiar = indiceEmpezar -1;
+        
+        for(int i = 0; i < longitudArrayLimpio; i++){
+            arrayLimpio[i] = arrayALimpiar[posicionArrayLimpiar];
+            posicionArrayLimpiar++;
+        }
+        return arrayLimpio;
+    }
+    
+    
 // ********************************************************************************************************
 }
